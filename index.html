@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>moedas converter</title>
+</head>
+
+<body>
+    <main class="converter-card">
+        <img class="converter-logo" src="assets/logo 1.png" alt="Logo principal">
+        <label class="field-label" for="currency-from">
+            Converter
+            <select class="currency-select" name="currency-from" id="currency-from">
+                <option value="BRL" selected>R$ Real brasileiro</option>
+                <option value="USD">US$ Dólar americano</option>
+                <option value="EUR">€ Euro</option>
+            </select>
+        </label>
+
+        <button class="swap-button" id="swap-currencies" type="button" aria-label="Inverter moedas" title="Inverter moedas">↕</button>
+
+        <label class="field-label" for="currency-to">
+            Converter <b>Para</b>
+            <select class="currency-select" name="currency-to" id="currency-to">
+                <option value="BRL">R$ Real brasileiro</option>
+                <option value="USD" selected>US$ Dólar americano</option>
+                <option value="EUR">€ Euro</option>
+            </select>
+        </label>
+
+        <label class="field-label" for="amount">
+            Valor
+            <input class="amount-input" type="text" id="amount" name="amount" inputmode="decimal" placeholder="10.000,00">
+        </label>
+        <button class="convert-button" type="button">Converter</button>
+        <p class="conversion-status" id="conversion-status" role="status" aria-live="polite"></p>
+    </main>
+    <section class="conversion-result" aria-label="Resultado da conversão">
+        <div class="currency-result currency-result--origin">
+           <img class="currency-icon" src="assets/brasil 2-3.png" alt="Bandeira do Brasil">
+           <p class="currency-name">Real</p>
+           <p class="currency-value">0,00</p>
+        </div>
+
+        <div class="conversion-arrow">
+           <img class="arrow-icon" src="assets/seta.png" alt="Convertido para">
+        </div>
+
+        <div class="currency-result currency-result--destination">
+           <img class="currency-icon" src="assets/estados-unidos (1) 1.png" alt="Bandeira dos Estados Unidos">
+           <p class="currency-name">Dólar americano</p>
+           <p class="currency-value">US$ 0,00</p>
+        </div>
+    </section>
+</body>
+
+</html>
